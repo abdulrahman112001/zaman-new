@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZAMAN</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="check.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="/index.js"></script>
+  </head>
+  <body>
+    
+    <div id="navBar"></div>
+    <script>
+      loadComponent('/componets/navbar.html','navBar');
+    </script>
+    
+
+
+    <div class="container" >
+
+        <div id="login" > 
+            <h1> التحقق من رقم الجوال</h1>
+            <p style="padding: 0 20px 10px 20px; color: black;">أدخل رمز التحقق الذي تلقيته على الرقم</p>
+            <p style="padding: 0 10px 20px 10px; color: black;">      +966 523 456 789</p>
+
+            
+            <div class="input" id="inputbox">
+                
+                <input type="tel" placeholder="رقم" maxlength="1"  id="display1">
+                <input type="tel" placeholder="رقم"  maxlength="1" id="display2">
+                <input type="tel" placeholder="رقم" maxlength="1"  id="display3">
+                <input type="tel" placeholder="رقم" maxlength="1"  id="display4">
+
+            
+            </div>
+            <span id="alert" style="color: red;"></span>
+            <button id="btn">استمرار</button>
+            <p style="color: black;">   لم تتلق الرمز؟</p>
+            <p><a href=""> 
+                
+إرسال رمز جديد
+            </a> </p>
+           
+        </div>
+    
+    
+    
+    
+        <div id="menu">
+          <ul>
+            <p id="p">سجل الدخول لتجربة <br> مستخدم أفضل</p>
+
+            <li style="display: flex ;justify-content: space-between; height: 80px;  
+            background-color: rgb(222, 207, 233);
+                      border-right: 3px solid #3A564F;">
+            <p >
+              <i  class="fa-solid fa-wallet" style="color: #2e2a2a;"></i>
+             <span style="margin-right: 10px;"> محفظة وصلت <br><span style="margin-right: 10px;">الإلكترونية</span</span>
+            
+            </p>
+
+            <p style="height: 30px; width: 60px; background-color:#10a26f; padding: 1px; color: #fff; border-radius: 5px; text-align: center; margin-left: 5px;" >جديد</p>
+            </li>
+
+            <li> <i class="fa-regular fa-heart"></i> <span>
+              <a href="/pages/العقارات المفضله/العقارات.html">المفضلة</a></span></li>
+            <li><i class="fa-regular fa-clock"></i>
+            <a href="/pages/نشاطي/نشاطي.html"><span>نشاطك</span></li></a>
+          </ul>
+        </div>
+
+
+    
+    
+    
+    
+    </div>
+
+   
+<div class="sec">
+<div class="card">
+  <div class="cardtitle"><h1><a href="/pages/login/login.html"> محفظة وصلت الإلكترونية</h1></a></div>
+  <div class="cardicon">  <i class="fa-solid fa-wallet" style="color: #2e2a2a;"></i></div>
+</div>
+<div class="card">
+  <div class="cardtitle"><h1> 
+   <a href="/pages/العقارات المفضله/العقارات.html">المفضلة</a> </h1></div>
+  <div class="cardicon"> <i class="fa-regular fa-heart"></i> </i></div>
+</div>
+<div class="card">
+  <a href="/pages/نشاطي/نشاطي.html"> <div class="cardtitle"><h1> 
+    نشاطك</h1></div></a>
+  <div class="cardicon"> <i class="fa-regular fa-clock"></i> </i></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- transition -->
+
+<div id="popUp" class=" hidden w-full h-full bg-black bg-opacity-20 z-40  absolute top-0 left-0" >
+</div>
+
+
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {pageLanguage:'ar',
+          includedLanguages:'en,ar'
+        },
+          'google_translate_element'
+        )
+      }
+    </script>
+  
+  
+<!-- transition -->
+
+
+
+
+
+
+
+    <script>
+let display1=document.getElementById("display1")
+let display2=document.getElementById("display2")
+let display3=document.getElementById("display3")
+let display4=document.getElementById("display4")
+window.onload=()=>{
+    display1.focus()
+}
+
+display1.addEventListener("keyup", () => {
+ display2.focus() 
+})
+
+display2.addEventListener("keyup", () => {
+ display3.focus()
+})
+
+display3.addEventListener("keyup", () => {
+ display4.focus() 
+})
+
+
+
+
+
+    </script>
+  </body>
+</html>
